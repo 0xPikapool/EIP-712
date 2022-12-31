@@ -37,10 +37,7 @@ lazy_static! {
 pub struct EIP712Domain {
     pub name: String,
     pub version: String,
-    /// Although the specification says this is required, it is sometimes not provided.
-    ///
-    /// We make it optional.
-    pub chain_id: Option<U256>,
+    pub chain_id: U256,
     pub verifying_contract: Address,
     #[serde(skip_serializing_if = "Option::is_none")]
     pub salt: Option<H256>,
