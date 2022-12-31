@@ -67,13 +67,13 @@ impl Validate for EIP712 {
     }
 }
 
-#[derive(Serialize, Deserialize, Validate, Debug, Clone)]
+#[derive(Serialize, Deserialize, Validate, Debug, Clone, Eq, PartialEq)]
 pub struct FieldType {
     #[validate(regex = "IDENT_REGEX")]
     pub name: String,
     #[serde(rename = "type")]
     #[validate(regex = "TYPE_REGEX")]
-    pub type_: String,
+    pub r#type: String,
 }
 
 #[cfg(test)]

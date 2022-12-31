@@ -169,7 +169,7 @@ mod error;
 mod parser;
 
 /// EIP712 struct
-pub use crate::eip712::{EIP712Domain, EIP712};
+pub use crate::eip712::{EIP712Domain, FieldType, MessageTypes, EIP712};
 /// the EIP-712 encoding function
 pub use crate::encode::hash_structured_data;
 /// encoding Error types
