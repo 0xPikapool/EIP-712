@@ -45,7 +45,7 @@ pub struct EIP712Domain {
 /// EIP-712 struct
 #[serde(rename_all = "camelCase")]
 #[serde(deny_unknown_fields)]
-#[derive(Serialize, Deserialize, Debug, Clone)]
+#[derive(Serialize, Deserialize, Debug, Clone, PartialEq, Eq)]
 pub struct EIP712 {
     pub types: MessageTypes,
     pub primary_type: String,
